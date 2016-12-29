@@ -48,7 +48,7 @@
             // 
             // txtbAboneNo
             // 
-            this.txtbAboneNo.Location = new System.Drawing.Point(64, 9);
+            this.txtbAboneNo.Location = new System.Drawing.Point(73, 9);
             this.txtbAboneNo.Name = "txtbAboneNo";
             this.txtbAboneNo.Size = new System.Drawing.Size(100, 20);
             this.txtbAboneNo.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // txtbAdSoyad
             // 
-            this.txtbAdSoyad.Location = new System.Drawing.Point(64, 35);
+            this.txtbAdSoyad.Location = new System.Drawing.Point(73, 35);
             this.txtbAdSoyad.Name = "txtbAdSoyad";
             this.txtbAdSoyad.Size = new System.Drawing.Size(100, 20);
             this.txtbAdSoyad.TabIndex = 1;
@@ -64,18 +64,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(0, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Abone No:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(0, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ad Soyadı:";
             // 
@@ -83,6 +85,7 @@
             // 
             this.groupBox1.Controls.Add(this.rbtnIsYeri);
             this.groupBox1.Controls.Add(this.rbtnEv);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(3, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(161, 88);
@@ -95,7 +98,7 @@
             this.rbtnIsYeri.AutoSize = true;
             this.rbtnIsYeri.Location = new System.Drawing.Point(9, 52);
             this.rbtnIsYeri.Name = "rbtnIsYeri";
-            this.rbtnIsYeri.Size = new System.Drawing.Size(54, 17);
+            this.rbtnIsYeri.Size = new System.Drawing.Size(61, 17);
             this.rbtnIsYeri.TabIndex = 5;
             this.rbtnIsYeri.TabStop = true;
             this.rbtnIsYeri.Text = "İş Yeri";
@@ -107,7 +110,7 @@
             this.rbtnEv.AutoSize = true;
             this.rbtnEv.Location = new System.Drawing.Point(9, 19);
             this.rbtnEv.Name = "rbtnEv";
-            this.rbtnEv.Size = new System.Drawing.Size(38, 17);
+            this.rbtnEv.Size = new System.Drawing.Size(40, 17);
             this.rbtnEv.TabIndex = 5;
             this.rbtnEv.TabStop = true;
             this.rbtnEv.Text = "Ev";
@@ -117,18 +120,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(35, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Son Sayaç";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(37, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Önceki Sayaç";
             // 
@@ -150,9 +155,10 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(38, 238);
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Location = new System.Drawing.Point(28, 238);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(83, 40);
+            this.btnEkle.Size = new System.Drawing.Size(100, 40);
             this.btnEkle.TabIndex = 9;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
@@ -160,35 +166,42 @@
             // 
             // lstbAboneler
             // 
+            this.lstbAboneler.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstbAboneler.FormattingEnabled = true;
+            this.lstbAboneler.ItemHeight = 16;
             this.lstbAboneler.Location = new System.Drawing.Point(187, 9);
             this.lstbAboneler.Name = "lstbAboneler";
-            this.lstbAboneler.Size = new System.Drawing.Size(104, 277);
+            this.lstbAboneler.Size = new System.Drawing.Size(104, 276);
             this.lstbAboneler.TabIndex = 10;
             this.lstbAboneler.DoubleClick += new System.EventHandler(this.lstbAboneler_DoubleClick);
             // 
             // lsltbOdenenFatura
             // 
+            this.lsltbOdenenFatura.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lsltbOdenenFatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lsltbOdenenFatura.FormattingEnabled = true;
             this.lsltbOdenenFatura.Location = new System.Drawing.Point(297, 9);
             this.lsltbOdenenFatura.Name = "lsltbOdenenFatura";
-            this.lsltbOdenenFatura.Size = new System.Drawing.Size(213, 277);
+            this.lsltbOdenenFatura.Size = new System.Drawing.Size(225, 56);
             this.lsltbOdenenFatura.TabIndex = 11;
             this.lsltbOdenenFatura.DoubleClick += new System.EventHandler(this.lsltbOdenenFatura_DoubleClick);
             // 
             // lstbAboneBilgileri
             // 
+            this.lstbAboneBilgileri.BackColor = System.Drawing.Color.Gainsboro;
+            this.lstbAboneBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstbAboneBilgileri.FormattingEnabled = true;
-            this.lstbAboneBilgileri.Location = new System.Drawing.Point(516, 9);
+            this.lstbAboneBilgileri.Location = new System.Drawing.Point(528, 9);
             this.lstbAboneBilgileri.Name = "lstbAboneBilgileri";
-            this.lstbAboneBilgileri.Size = new System.Drawing.Size(245, 160);
+            this.lstbAboneBilgileri.Size = new System.Drawing.Size(245, 108);
             this.lstbAboneBilgileri.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 290);
+            this.BackColor = System.Drawing.Color.Coral;
+            this.ClientSize = new System.Drawing.Size(781, 290);
             this.Controls.Add(this.lstbAboneBilgileri);
             this.Controls.Add(this.lsltbOdenenFatura);
             this.Controls.Add(this.lstbAboneler);

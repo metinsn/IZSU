@@ -118,13 +118,15 @@ namespace IZSU
 
         private void lsltbOdenenFatura_DoubleClick(object sender, EventArgs e)
         {
+            lstbAboneBilgileri.Items.Clear();
+            lstbAboneBilgileri.Items.Add("ABONE BİLGİLERİ :");
             Aboneler secAbone = (Aboneler)lstbAboneler.SelectedItem;
-            lstbAboneBilgileri.Items.Add("Abone No :" + secAbone.AbnNo);
-            lstbAboneBilgileri.Items.Add("Abone Ad Soyad :" + secAbone.AbnAdSoyad);
-            lstbAboneBilgileri.Items.Add("Abone önceki sayaç :" + secAbone.AbnOncekiSayac);
-            lstbAboneBilgileri.Items.Add("Abone Ödenen Tutar :" + secAbone.odenen()+" TL");
-            lstbAboneBilgileri.Items.Add("Abone Sayaç :" + secAbone.Abnsayac);
-            lstbAboneBilgileri.Items.Add("Abone Borç :" + secAbone.borc() + " TL");
+            lstbAboneBilgileri.Items.Add("Abone No : " + secAbone.AbnNo);
+            lstbAboneBilgileri.Items.Add("Abone Ad Soyad : " + secAbone.AbnAdSoyad);
+            lstbAboneBilgileri.Items.Add("Abone önceki sayaç : " + secAbone.AbnOncekiSayac);
+            lstbAboneBilgileri.Items.Add("Abone Ödenen Tutar : " + secAbone.odenen()+" TL");
+            lstbAboneBilgileri.Items.Add("Abone Sayaç : " + secAbone.Abnsayac);
+            lstbAboneBilgileri.Items.Add("Abone Borç : " + secAbone.borc() + " TL");
 
         }
     }
