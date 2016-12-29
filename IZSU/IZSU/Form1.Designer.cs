@@ -181,14 +181,14 @@
             this.lstbAboneBilgileri.FormattingEnabled = true;
             this.lstbAboneBilgileri.Location = new System.Drawing.Point(516, 9);
             this.lstbAboneBilgileri.Name = "lstbAboneBilgileri";
-            this.lstbAboneBilgileri.Size = new System.Drawing.Size(168, 277);
+            this.lstbAboneBilgileri.Size = new System.Drawing.Size(245, 160);
             this.lstbAboneBilgileri.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 290);
+            this.ClientSize = new System.Drawing.Size(773, 290);
             this.Controls.Add(this.lstbAboneBilgileri);
             this.Controls.Add(this.lsltbOdenenFatura);
             this.Controls.Add(this.lstbAboneler);

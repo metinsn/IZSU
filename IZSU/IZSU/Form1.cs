@@ -19,9 +19,9 @@ namespace IZSU
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lstbAboneler.Items.Add("Abone No");
-            lsltbOdenenFatura.Items.Add("Abone No\t" + "Ödenmiş Tutar");
-            lstbAboneBilgileri.Items.Add("Abone Bilgileri\t");
+            lstbAboneler.Items.Add("ABONE NO :");
+            lsltbOdenenFatura.Items.Add("ABONE NO :\t" + "ÖDENMİŞ TUTAR :");
+            lstbAboneBilgileri.Items.Add("ABONE BİLGİLERİ :");
             rbtnEv.Checked = true;
         }
 
@@ -110,10 +110,10 @@ namespace IZSU
         {
             lstbAboneBilgileri.Items.Clear();
             lsltbOdenenFatura.Items.Clear();
-            lsltbOdenenFatura.Items.Add("Abone No\t" + "Ödenmiş Tutar");
-            lstbAboneBilgileri.Items.Add("Abone Bilgileri\t");
+            lsltbOdenenFatura.Items.Add("ABONE NO :\t" + "ÖDENMİŞ TUTAR :");
+            lstbAboneBilgileri.Items.Add("ABONE BİLGİLERİ :");
             Aboneler secAbone = (Aboneler)lstbAboneler.SelectedItem;                        
-            lsltbOdenenFatura.Items.Add(secAbone.AbnNo+"\t\t"+secAbone.borc());
+            lsltbOdenenFatura.Items.Add(secAbone.AbnNo+"\t\t"+ secAbone.odenen() + " TL");
         }
 
         private void lsltbOdenenFatura_DoubleClick(object sender, EventArgs e)
