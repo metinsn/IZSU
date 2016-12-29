@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnEv = new System.Windows.Forms.RadioButton();
             this.rbtnIsYeri = new System.Windows.Forms.RadioButton();
+            this.rbtnEv = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtbiSayac = new System.Windows.Forms.TextBox();
+            this.txtbSayac = new System.Windows.Forms.TextBox();
             this.txtbOncekiSayac = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.lstbAboneler = new System.Windows.Forms.ListBox();
@@ -52,6 +52,7 @@
             this.txtbAboneNo.Name = "txtbAboneNo";
             this.txtbAboneNo.Size = new System.Drawing.Size(100, 20);
             this.txtbAboneNo.TabIndex = 0;
+            this.txtbAboneNo.TextChanged += new System.EventHandler(this.txtbAboneNo_TextChanged);
             // 
             // txtbAdSoyad
             // 
@@ -89,18 +90,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Abone Tipi";
             // 
-            // rbtnEv
-            // 
-            this.rbtnEv.AutoSize = true;
-            this.rbtnEv.Location = new System.Drawing.Point(9, 19);
-            this.rbtnEv.Name = "rbtnEv";
-            this.rbtnEv.Size = new System.Drawing.Size(38, 17);
-            this.rbtnEv.TabIndex = 5;
-            this.rbtnEv.TabStop = true;
-            this.rbtnEv.Text = "Ev";
-            this.rbtnEv.UseVisualStyleBackColor = true;
-            this.rbtnEv.Click += new System.EventHandler(this.rbtnEv_Click);
-            // 
             // rbtnIsYeri
             // 
             this.rbtnIsYeri.AutoSize = true;
@@ -112,6 +101,18 @@
             this.rbtnIsYeri.Text = "İş Yeri";
             this.rbtnIsYeri.UseVisualStyleBackColor = true;
             this.rbtnIsYeri.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbtnIsYeri_MouseClick);
+            // 
+            // rbtnEv
+            // 
+            this.rbtnEv.AutoSize = true;
+            this.rbtnEv.Location = new System.Drawing.Point(9, 19);
+            this.rbtnEv.Name = "rbtnEv";
+            this.rbtnEv.Size = new System.Drawing.Size(38, 17);
+            this.rbtnEv.TabIndex = 5;
+            this.rbtnEv.TabStop = true;
+            this.rbtnEv.Text = "Ev";
+            this.rbtnEv.UseVisualStyleBackColor = true;
+            this.rbtnEv.Click += new System.EventHandler(this.rbtnEv_Click);
             // 
             // label3
             // 
@@ -131,12 +132,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Önceki Sayaç";
             // 
-            // txtbiSayac
+            // txtbSayac
             // 
-            this.txtbiSayac.Location = new System.Drawing.Point(28, 212);
-            this.txtbiSayac.Name = "txtbiSayac";
-            this.txtbiSayac.Size = new System.Drawing.Size(100, 20);
-            this.txtbiSayac.TabIndex = 6;
+            this.txtbSayac.Location = new System.Drawing.Point(28, 212);
+            this.txtbSayac.Name = "txtbSayac";
+            this.txtbSayac.Size = new System.Drawing.Size(100, 20);
+            this.txtbSayac.TabIndex = 6;
+            this.txtbSayac.TextChanged += new System.EventHandler(this.txtbSayac_TextChanged);
             // 
             // txtbOncekiSayac
             // 
@@ -144,6 +146,7 @@
             this.txtbOncekiSayac.Name = "txtbOncekiSayac";
             this.txtbOncekiSayac.Size = new System.Drawing.Size(100, 20);
             this.txtbOncekiSayac.TabIndex = 5;
+            this.txtbOncekiSayac.TextChanged += new System.EventHandler(this.txtbOncekiSayac_TextChanged);
             // 
             // btnEkle
             // 
@@ -160,37 +163,38 @@
             this.lstbAboneler.FormattingEnabled = true;
             this.lstbAboneler.Location = new System.Drawing.Point(187, 9);
             this.lstbAboneler.Name = "lstbAboneler";
-            this.lstbAboneler.Size = new System.Drawing.Size(225, 277);
+            this.lstbAboneler.Size = new System.Drawing.Size(104, 277);
             this.lstbAboneler.TabIndex = 10;
+            this.lstbAboneler.DoubleClick += new System.EventHandler(this.lstbAboneler_DoubleClick);
             // 
             // lsltbOdenenFatura
             // 
             this.lsltbOdenenFatura.FormattingEnabled = true;
-            this.lsltbOdenenFatura.Location = new System.Drawing.Point(418, 9);
+            this.lsltbOdenenFatura.Location = new System.Drawing.Point(297, 9);
             this.lsltbOdenenFatura.Name = "lsltbOdenenFatura";
-            this.lsltbOdenenFatura.Size = new System.Drawing.Size(225, 277);
+            this.lsltbOdenenFatura.Size = new System.Drawing.Size(213, 277);
             this.lsltbOdenenFatura.TabIndex = 11;
             // 
             // lstbAboneBilgileri
             // 
             this.lstbAboneBilgileri.FormattingEnabled = true;
-            this.lstbAboneBilgileri.Location = new System.Drawing.Point(649, 9);
+            this.lstbAboneBilgileri.Location = new System.Drawing.Point(516, 9);
             this.lstbAboneBilgileri.Name = "lstbAboneBilgileri";
-            this.lstbAboneBilgileri.Size = new System.Drawing.Size(225, 277);
+            this.lstbAboneBilgileri.Size = new System.Drawing.Size(168, 277);
             this.lstbAboneBilgileri.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 290);
+            this.ClientSize = new System.Drawing.Size(691, 290);
             this.Controls.Add(this.lstbAboneBilgileri);
             this.Controls.Add(this.lsltbOdenenFatura);
             this.Controls.Add(this.lstbAboneler);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtbiSayac);
+            this.Controls.Add(this.txtbSayac);
             this.Controls.Add(this.txtbOncekiSayac);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
@@ -198,7 +202,8 @@
             this.Controls.Add(this.txtbAdSoyad);
             this.Controls.Add(this.txtbAboneNo);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "İZSU Abone";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -217,7 +222,7 @@
         private System.Windows.Forms.RadioButton rbtnEv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtbiSayac;
+        private System.Windows.Forms.TextBox txtbSayac;
         private System.Windows.Forms.TextBox txtbOncekiSayac;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.ListBox lstbAboneler;
