@@ -29,11 +29,11 @@ namespace IZSU
         {
             if (this.AbnTur == "IsYeri")
             {
-                return (Convert.ToDouble(this.AbnOncekiSayac) - Convert.ToDouble(this.Abnsayac)) * 0.5;
+                return (Convert.ToDouble(this.Abnsayac)- Convert.ToDouble(this.AbnOncekiSayac)) * 0.5;
             }
             else
             {
-                return (Convert.ToDouble(this.AbnOncekiSayac) - Convert.ToDouble(this.Abnsayac)) * 0.3;
+                return (Convert.ToDouble(this.Abnsayac)- Convert.ToDouble(this.AbnOncekiSayac)) * 0.3;
             }
         }
         public Aboneler()
