@@ -20,7 +20,7 @@ namespace IZSU
         private void Form1_Load(object sender, EventArgs e)
         {
             lstbAboneler.Items.Add("Abone No");
-            lsltbOdenenFatura.Items.Add("Abone No\t" + "Ödenmiş Tutar\t");
+            lsltbOdenenFatura.Items.Add("Abone No\t" + "Ödenmiş Tutar");
             lstbAboneBilgileri.Items.Add("Abone Bilgileri\t");
             rbtnEv.Checked = true;
         }
@@ -87,7 +87,6 @@ namespace IZSU
             }
 
         }
-
         private void btnEkle_Click(object sender, EventArgs e)
         {
             if (txtbAboneNo.Text != "" && txtbSayac.Text != "" && txtbOncekiSayac.Text != "")
@@ -99,7 +98,7 @@ namespace IZSU
                 abnler.AbnOncekiSayac = Convert.ToInt32(txtbOncekiSayac.Text);
                 string abonetur = rbtnEv.Checked == true ? "Ev" : "IsYeri";
                 abnler.AbnTur = abonetur.ToString();
-                lstbAboneler.Items.Add(abnler.AbnNo);
+                lstbAboneler.Items.Add(abnler);
             }
             else
             {
@@ -109,14 +108,24 @@ namespace IZSU
 
         private void lstbAboneler_DoubleClick(object sender, EventArgs e)
         {
-            //string secAbone = lstbAboneler.SelectedItem.ToString();  // 1
-            Aboneler secAbone = (Aboneler)lstbAboneler.SelectedItem;
-
-            //MessageBox.Show(lstbAboneler.SelectedItem.ToString());
-            lsltbOdenenFatura.Items.Add(secAbone); // 1
-            //MessageBox.Show(secAbone);
+            lstbAboneBilgileri.Items.Clear();
+            lsltbOdenenFatura.Items.Clear();
+            lsltbOdenenFatura.Items.Add("Abone No\t" + "Ödenmiş Tutar");
+            lstbAboneBilgileri.Items.Add("Abone Bilgileri\t");
+            Aboneler secAbone = (Aboneler)lstbAboneler.SelectedItem;                        
+            lsltbOdenenFatura.Items.Add(secAbone.AbnNo+"\t\t"+secAbone.borc());
         }
 
+        private void lsltbOdenenFatura_DoubleClick(object sender, EventArgs e)
+        {
+            Aboneler secAbone = (Aboneler)lstbAboneler.SelectedItem;
+            lstbAboneBilgileri.Items.Add("Abone No :" + secAbone.AbnNo);
+            lstbAboneBilgileri.Items.Add("Abone Ad Soyad :" + secAbone.AbnAdSoyad);
+            lstbAboneBilgileri.Items.Add("Abone önceki sayaç :" + secAbone.AbnOncekiSayac);
+            lstbAboneBilgileri.Items.Add("Abone Ödenen Tutar :" + secAbone.odenen()+" TL");
+            lstbAboneBilgileri.Items.Add("Abone Sayaç :" + secAbone.Abnsayac);
+            lstbAboneBilgileri.Items.Add("Abone Borç :" + secAbone.borc() + " TL");
 
+        }
     }
 }

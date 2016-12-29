@@ -174,6 +174,7 @@
             this.lsltbOdenenFatura.Name = "lsltbOdenenFatura";
             this.lsltbOdenenFatura.Size = new System.Drawing.Size(213, 277);
             this.lsltbOdenenFatura.TabIndex = 11;
+            this.lsltbOdenenFatura.DoubleClick += new System.EventHandler(this.lsltbOdenenFatura_DoubleClick);
             // 
             // lstbAboneBilgileri
             // 
